@@ -22,7 +22,7 @@ class Garment {
         this.size = size;
         this.color = color;
         this.price = price;
-        this.stockQuantity = stockQuantity;
+        this.stockQuantity = stockQuantity;  
     }
 
     public void updateStock(int quantity) {
@@ -33,7 +33,6 @@ class Garment {
         return price - (price * discountPercentage / 100);
     }
 
-    // Getters and setters
     public String getId() {
         return id;
     }
@@ -91,6 +90,55 @@ class Garment {
     }
 }
 
+class Fabric {
+    private String id;
+    private String type;
+    private String color;
+    private double pricePerMeter;
+
+    public Fabric(String id, String type, String color, double pricePerMeter) {
+        this.id = id;
+        this.type = type;
+        this.color = color;
+        this.pricePerMeter = pricePerMeter;
+    }
+
+    public double calculateCost(double meters) {
+        return pricePerMeter * meters;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getPricePerMeter() {
+        return pricePerMeter;
+    }
+
+    public void setPricePerMeter(double pricePerMeter) {
+        this.pricePerMeter = pricePerMeter;
+    }
+}
 
 public class GermentsManagement {
 
